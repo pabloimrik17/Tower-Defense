@@ -13,10 +13,15 @@ public class GameManager : MonoBehaviour {
 	public int enemiesPerWave;
 	public int enemiesPerSpawn;
 
+    public Transform exitPoint;
+	public Transform[] wayPoints;
+
 	private int enemiesOnScreen = 0;
 
+    private const float spawnDelay = 0.6f;
+
 	void Start () {
-        spawnEnemy();
+        StartCoroutine(Spawn());
 	}
 
     private void Awake() {
@@ -33,7 +38,7 @@ public class GameManager : MonoBehaviour {
         DontDestroyOnLoad(gameObject); // PERSISTE ENTRE ESCENAS
     }
 
-    void spawnEnemy() {
+    IEnumerator Spawn() {
         if(enemiesPerSpawn > 0 && enemiesOnScreen < enemiesPerWave) {
             for(int i = 0; i < enemiesPerSpawn; i++) {
                 if(enemiesOnScreen < maxEnemiesOnScreen) {
@@ -42,6 +47,15 @@ public class GameManager : MonoBehaviour {
                     enemiesOnScreen++;
                 }
             }
+             yield return new WaitForSeconds(spawnDelay);
+             StartCoroutine(Spawn());
+        }
+       
+    }
+
+    public void removeEnemyFromScreen() {
+        if(enemiesOnScreen > 0) {
+            enemiesOnScreen--;
         }
     }
 }

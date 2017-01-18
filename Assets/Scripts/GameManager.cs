@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour {
         if(enemiesPerSpawn > 0 && enemiesOnScreen < enemiesPerWave) {
             for(int i = 0; i < enemiesPerSpawn; i++) {
                 if(enemiesOnScreen < maxEnemiesOnScreen) {
-                    GameObject newEnemy = Instantiate(enemies[Random.Range(0, enemies.Length - 1)]) as GameObject;
+                    GameObject newEnemy = Instantiate(enemies[Random.Range(0, enemies.Length)]) as GameObject;
                     newEnemy.transform.position = spawnPoint.transform.position;
                     enemiesOnScreen++;
                 }

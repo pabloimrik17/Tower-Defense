@@ -24,13 +24,13 @@ public class Enemy : MonoBehaviour {
 	}
 
 	void UpdateEnemyPosition() {
-		if(GameManager.instance.wayPoints != null) {
+		if(GameManager.Instance.wayPoints != null) {
 			navigationTime += Time.deltaTime;
 			if(navigationTime > navigationUpdateTime) {
-				if(target < GameManager.instance.wayPoints.Length) {
-					enemy.position = Vector2.MoveTowards(enemy.position, GameManager.instance.wayPoints[target].position, navigationTime);
+				if(target < GameManager.Instance.wayPoints.Length) {
+					enemy.position = Vector2.MoveTowards(enemy.position, GameManager.Instance.wayPoints[target].position, navigationTime);
 				} else {
-					enemy.position = Vector2.MoveTowards(enemy.position, GameManager.instance.exitPoint.position, navigationTime);
+					enemy.position = Vector2.MoveTowards(enemy.position, GameManager.Instance.exitPoint.position, navigationTime);
 				}
 				navigationTime = 0;
 			}
@@ -42,7 +42,7 @@ public class Enemy : MonoBehaviour {
 			target++;
 		} else if(collider.tag == "Finish") {
 			Destroy(gameObject);
-			GameManager.instance.removeEnemyFromScreen();
+			GameManager.Instance.removeEnemyFromScreen();
 		}
 	}
 

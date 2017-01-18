@@ -1,11 +1,7 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour {
-
-    public static GameManager instance = null;
-
+public class GameManager : Singleton<GameManager> {
 	public GameObject spawnPoint;
 	public GameObject[] enemies;
 	
@@ -23,20 +19,6 @@ public class GameManager : MonoBehaviour {
 	void Start () {
         StartCoroutine(Spawn());
 	}
-
-    private void Awake() {
-        CheckSingleton();
-    }
-
-    void CheckSingleton() {
-        if (instance == null) {
-            instance = this;
-        } else if (instance != this) {
-            Destroy(gameObject);
-        }
-
-        DontDestroyOnLoad(gameObject); // PERSISTE ENTRE ESCENAS
-    }
 
     IEnumerator Spawn() {
         if(enemiesPerSpawn > 0 && enemiesOnScreen < enemiesPerWave) {

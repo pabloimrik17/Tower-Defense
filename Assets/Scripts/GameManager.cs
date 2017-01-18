@@ -2,15 +2,20 @@
 using UnityEngine;
 
 public class GameManager : Singleton<GameManager> {
-	public GameObject spawnPoint;
-	public GameObject[] enemies;
-	
-	public int maxEnemiesOnScreen;
-	public int enemiesPerWave;
-	public int enemiesPerSpawn;
-
-    public Transform exitPoint;
-	public Transform[] wayPoints;
+    [SerializeField] // MUESTRA EN LA UI DE UNITY UNA VARIABLE PRIVADA
+	private GameObject spawnPoint;
+    [SerializeField]
+	private GameObject[] enemies;
+    [SerializeField]
+	private int maxEnemiesOnScreen;
+    [SerializeField]
+	private int enemiesPerWave;
+    [SerializeField]
+	private int enemiesPerSpawn;
+    [SerializeField]
+    private Transform exitPoint;
+    [SerializeField]
+	private Transform[] wayPoints;
 
 	private int enemiesOnScreen = 0;
 
@@ -38,6 +43,18 @@ public class GameManager : Singleton<GameManager> {
     public void removeEnemyFromScreen() {
         if(enemiesOnScreen > 0) {
             enemiesOnScreen--;
+        }
+    }
+
+    public Transform[] WayPoints {
+        get{
+            return this.wayPoints;
+        }
+    }
+
+    public Transform ExitPoint {
+        get{
+            return this.exitPoint;
         }
     }
 }

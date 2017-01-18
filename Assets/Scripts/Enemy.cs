@@ -3,16 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour {
-
-	public int target = 0;
-	
-	
-	
-	public float navigationUpdateTime;
-
-	private Transform enemy;
+	[SerializeField]
+	private float navigationUpdateTime;
 	
 	private float navigationTime = 0;
+	private int target = 0;
+	private Transform enemy;
+	
 	// Use this for initialization
 	void Start () {
 		enemy = gameObject.GetComponent<Transform>();
@@ -24,13 +21,13 @@ public class Enemy : MonoBehaviour {
 	}
 
 	void UpdateEnemyPosition() {
-		if(GameManager.Instance.wayPoints != null) {
+		if(GameManager.Instance.WayPoints != null) {
 			navigationTime += Time.deltaTime;
 			if(navigationTime > navigationUpdateTime) {
-				if(target < GameManager.Instance.wayPoints.Length) {
-					enemy.position = Vector2.MoveTowards(enemy.position, GameManager.Instance.wayPoints[target].position, navigationTime);
+				if(target < GameManager.Instance.WayPoints.Length) {
+					enemy.position = Vector2.MoveTowards(enemy.position, GameManager.Instance.WayPoints[target].position, navigationTime);
 				} else {
-					enemy.position = Vector2.MoveTowards(enemy.position, GameManager.Instance.exitPoint.position, navigationTime);
+					enemy.position = Vector2.MoveTowards(enemy.position, GameManager.Instance.ExitPoint.position, navigationTime);
 				}
 				navigationTime = 0;
 			}

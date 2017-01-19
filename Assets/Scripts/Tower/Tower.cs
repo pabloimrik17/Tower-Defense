@@ -18,7 +18,12 @@ public class Tower : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		attackRadius -= Time.deltaTime;
+		if(targetEnemy == null) {
+			SetTargetEnemy();
+		} else if(Vector2.Distance(transform.position, targetEnemy.transform.position) > attackRadius) { //TODO ESTO NO ES ASI ORIGINALMENTE, POR SI CAUSA BUG
+			ClearTargetEney();
+		}
 	}
 
 	private List<Enemy> GetAllEnemiesInRange() {
@@ -45,5 +50,22 @@ public class Tower : MonoBehaviour {
 		}
 
 		return nearestEnemy;
+	}
+
+	private void SetTargetEnemy() {
+		Enemy nearestEney = GetNearestEnemyInRange();
+		if(nearestEney != null && Vector2.Distance(transform.position, nearestEney.transform.position) <= attackRadius) {
+			targetEnemy = nearestEney;
+		}
+	}
+
+	private void ClearTargetEney() {
+		targetEnemy = null;
+	}
+
+	public void Attack() {
+		if(targetEnemy != null) {
+			Projectile newProjectile = Instantiate(projectile) as Projectile;
+		}
 	}
 }

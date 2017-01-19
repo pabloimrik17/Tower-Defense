@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : Singleton<GameManager> {
@@ -17,21 +18,20 @@ public class GameManager : Singleton<GameManager> {
     [SerializeField]
 	private Transform[] wayPoints;
 
-	private int enemiesOnScreen = 0;
-
     private const float spawnDelay = 0.6f;
+
+    public List<Enemy> EnemyList = new List<Enemy>();
 
 	void Start () {
         StartCoroutine(Spawn());
 	}
 
     IEnumerator Spawn() {
-        if(enemiesPerSpawn > 0 && enemiesOnScreen < enemiesPerWave) {
+        if(enemiesPerSpawn > 0 && EnemyList.Count < enemiesPerWave) {
             for(int i = 0; i < enemiesPerSpawn; i++) {
-                if(enemiesOnScreen < maxEnemiesOnScreen) {
+                if(EnemyList.Count < maxEnemiesOnScreen) {
                     GameObject newEnemy = Instantiate(enemies[Random.Range(0, enemies.Length)]) as GameObject;
                     newEnemy.transform.position = spawnPoint.transform.position;
-                    enemiesOnScreen++;
                 }
             }
              yield return new WaitForSeconds(spawnDelay);
@@ -40,10 +40,21 @@ public class GameManager : Singleton<GameManager> {
        
     }
 
-    public void removeEnemyFromScreen() {
-        if(enemiesOnScreen > 0) {
-            enemiesOnScreen--;
+    public void RegisterEnemy(Enemy enemy) {
+        EnemyList.Add(enemy);
+    }
+
+    public void UnregisterEnemy(Enemy enemy) {
+        EnemyList.Remove(enemy);
+        Destroy(enemy.gameObject);
+    }
+
+    public void DestroyAllEnemies() {
+        foreach(Enemy enemy in EnemyList) {
+            Destroy(enemy.gameObject);
         }
+
+        EnemyList.Clear();
     }
 
     public Transform[] WayPoints {

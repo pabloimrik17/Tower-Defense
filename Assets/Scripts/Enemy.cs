@@ -12,8 +12,8 @@ public class Enemy : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		enemy = gameObject.GetComponent<Transform>();
-		GameManager.instance.RegisterEnemy(this);
+		enemy = GetComponent<Transform>();
+		GameManager.Instance.RegisterEnemy(this);
 	}
 	
 	// Update is called once per frame

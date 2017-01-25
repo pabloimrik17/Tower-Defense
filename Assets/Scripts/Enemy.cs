@@ -5,6 +5,8 @@ using UnityEngine;
 public class Enemy : MonoBehaviour {
 	[SerializeField]
 	private float navigationUpdateTime;
+    [SerializeField]
+    private float life;
 	
 	private float navigationTime = 0;
 	private int target = 0;
@@ -40,7 +42,9 @@ public class Enemy : MonoBehaviour {
 			target++;
 		} else if(collider.tag == "Finish") {
 			GameManager.Instance.UnregisterEnemy(this);
-		}
+		} else if(collider.tag == "Projectile") {
+            Destroy(collider.gameObject);
+        }
 	}
 
 }

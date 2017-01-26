@@ -26,7 +26,7 @@ public class Tower : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		attackCounter -= Time.deltaTime;
-		if(targetEnemy == null) {
+		if(targetEnemy == null || targetEnemy.IsDead) {
 			SetTargetEnemy();
 		} else {
 			if (attackCounter <= 0) {

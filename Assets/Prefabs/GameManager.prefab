@@ -33,8 +33,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1208557533167430}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.9170294, y: 1.6900737, z: -0.03061444}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.9170294, y: 1.6900737, z: -10.030615}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -51,13 +51,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5d28d8666da3804c9afa70345d81d20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  totalWaves: 10
+  totalMoneyLbl: {fileID: 114194808196803676, guid: e13217a274874d340a66c1f3777a4217,
+    type: 2}
+  currentWaveLbl: {fileID: 114792700208375758, guid: b987e97c81f7fbf4e823edf1167cab8e,
+    type: 2}
+  TotalEscapedLbl: {fileID: 114488634167437310, guid: b987e97c81f7fbf4e823edf1167cab8e,
+    type: 2}
   spawnPoint: {fileID: 1040888624125068, guid: c71bc050d34372c4c9af413ac251554b, type: 2}
   enemies:
   - {fileID: 1220905865491808, guid: 1125c0ecbb7901741a9430b8bfbbca26, type: 2}
   - {fileID: 1671144718428894, guid: d65975f4c1f153e49849cafabacce0a0, type: 2}
   - {fileID: 1566198882979108, guid: 4bb6dcae130d8c348890079da3962d7e, type: 2}
-  maxEnemiesOnScreen: 30
-  enemiesPerWave: 30
+  maxEnemiesOnScreen: 8
+  enemiesPerWave: 8
   enemiesPerSpawn: 1
   exitPoint: {fileID: 4015236921721944, guid: 5069cd7dc7efe1a41af2d61ef332e84f, type: 2}
   wayPoints:
@@ -70,4 +77,7 @@ MonoBehaviour:
   - {fileID: 4281850197733514, guid: 7724c9f0ce3451b459a05fac65e0a237, type: 2}
   - {fileID: 4180071347463102, guid: 7724c9f0ce3451b459a05fac65e0a237, type: 2}
   - {fileID: 4072981197242344, guid: 7724c9f0ce3451b459a05fac65e0a237, type: 2}
+  playBtnLbl: {fileID: 114315192795495474, guid: f73e63bc870e437409ef34dd2e6b461d,
+    type: 2}
+  playBtn: {fileID: 114564809921145062, guid: f73e63bc870e437409ef34dd2e6b461d, type: 2}
   EnemyList: []

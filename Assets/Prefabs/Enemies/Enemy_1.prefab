@@ -108,6 +108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   navigationUpdateTime: 0.01
   healthPoints: 200
+  rewardAmount: 2
 --- !u!212 &212757909325893314
 SpriteRenderer:
   m_ObjectHideFlags: 1

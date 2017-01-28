@@ -19,6 +19,9 @@ public class Enemy : MonoBehaviour {
 
 	private bool isDead = false;
 
+    [SerializeField]
+    private int rewardAmount;
+
 	public bool IsDead {
 		get{
 			return isDead;

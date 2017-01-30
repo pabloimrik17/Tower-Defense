@@ -60,6 +60,9 @@ public class Enemy : MonoBehaviour {
 			target++;
 		} else if(collider.tag == "Finish") {
 			GameManager.Instance.UnregisterEnemy(this);
+			GameManager.Instance.RoundEscaped += 1;
+			GameManager.Instance.TotalEscaped += 1;
+			GameManager.Instance.isWaveOver ();
 		} else if(collider.tag == "Projectile") {
 			Projectile projectile = collider.gameObject.GetComponent<Projectile> ();
 			enemyHit (projectile.AttackStrength);
@@ -81,6 +84,9 @@ public class Enemy : MonoBehaviour {
 	public void Die() {
 		isDead = true;
 		enemyCollider.enabled = false;
+		GameManager.Instance.TotalKilled += 1;
+		GameManager.Instance.AddMoney (rewardAmount);
+		GameManager.Instance.isWaveOver ();
 	}
 
 }

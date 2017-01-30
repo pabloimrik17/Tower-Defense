@@ -2,9 +2,18 @@
 using UnityEngine.EventSystems;
 
 public class TowerManager : Singleton<TowerManager> {
-	[SerializeField]
-	private TowerBtn towerBtnPresssed;
+    [SerializeField]
+    private TowerBtn towerBtnPresssed;
 	private SpriteRenderer spriteRenderer;
+
+    public TowerBtn TowerBtnPressed {
+        get {
+            return towerBtnPresssed;
+        }
+        set {
+            towerBtnPresssed = value;
+        }
+    }
 	
 	void Start () {
 		spriteRenderer = GetComponent<SpriteRenderer>();

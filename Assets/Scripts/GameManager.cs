@@ -1,8 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
+public enum gameStatus {
+    next, play, gameover, win
+}
 
 public class GameManager : Singleton<GameManager> {
+    [SerializeField]
+    private int totalWaves = 10;
+    [SerializeField]
+    private Text totalMoneyLbl;
+    [SerializeField]
+    private Text currentWaveLbl;
+    [SerializeField]
+    private Text TotalEscapedLbl;
+
     [SerializeField] // MUESTRA EN LA UI DE UNITY UNA VARIABLE PRIVADA
 	private GameObject spawnPoint;
     [SerializeField]
@@ -17,14 +31,41 @@ public class GameManager : Singleton<GameManager> {
     private Transform exitPoint;
     [SerializeField]
 	private Transform[] wayPoints;
+    [SerializeField]
+    private Text playBtnLbl;
+    [SerializeField]
+    private Button playBtn;
+
+    private int waveNumber = 0;
+    private int totalMoney = 10;
+    private int totalEscaped = 0;
+    private int roundEscaped = 0;
+    private int totalKill = 0;
+    private int whichEnemiesToSpawn = 0;
+    private gameStatus currentState = gameStatus.play;
 
     private const float spawnDelay = 0.6f;
 
     public List<Enemy> EnemyList = new List<Enemy>();
 
+    public int TotalMoney {
+        get {
+            return totalMoney;
+        }
+        set {
+            totalMoney = value;
+            totalMoneyLbl.text = totalMoney.ToString();
+        }
+    }
+
 	void Start () {
-        StartCoroutine(Spawn());
+        playBtn.gameObject.SetActive(false);
+        ShowMenu();
 	}
+
+    void Update() {
+        handleEScape();
+    }
 
     IEnumerator Spawn() {
         if(enemiesPerSpawn > 0 && EnemyList.Count < enemiesPerWave) {
@@ -66,6 +107,40 @@ public class GameManager : Singleton<GameManager> {
     public Transform ExitPoint {
         get{
             return this.exitPoint;
+        }
+    }
+
+    public void AddMoney(int amount) {
+        TotalMoney += amount;
+    }
+
+    public void SubtractMoney(int amount) {
+        TotalMoney -= amount;
+    }
+
+    public void ShowMenu() {
+        switch(currentState) {
+            case gameStatus.gameover:
+                playBtnLbl.text = "Play Again!";
+                break;
+            case gameStatus.next:
+                playBtnLbl.text = "Next Wave";
+                break;
+            case gameStatus.play:
+                playBtnLbl.text = "Play";
+                break;
+            case gameStatus.win:
+                playBtnLbl.text = "Play";
+                break;
+        }
+
+        playBtn.gameObject.SetActive(true);
+    }
+
+    private void handleEScape() {
+        if(Input.GetKeyDown(KeyCode.Escape)) {
+            TowerManager.Instance.disableDragSprite();
+            TowerManager.Instance.TowerBtnPressed = null;
         }
     }
 }

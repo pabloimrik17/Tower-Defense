@@ -21,8 +21,8 @@ public class GameManager : Singleton<GameManager> {
 	private GameObject spawnPoint;
     [SerializeField]
 	private GameObject[] enemies;
-    [SerializeField]
-	private int maxEnemiesOnScreen;
+   
+
     [SerializeField]
 	private int enemiesPerWave = 3;
     [SerializeField]
@@ -94,19 +94,18 @@ public class GameManager : Singleton<GameManager> {
         handleEScape();
     }
 
-    IEnumerator Spawn() {
-        if(enemiesPerSpawn > 0 && EnemyList.Count < enemiesPerWave) {
-            for(int i = 0; i < enemiesPerSpawn; i++) {
-                if(EnemyList.Count < maxEnemiesOnScreen) {
-                    GameObject newEnemy = Instantiate(enemies[Random.Range(0, enemies.Length)]) as GameObject;
-                    newEnemy.transform.position = spawnPoint.transform.position;
-                }
-            }
-             yield return new WaitForSeconds(spawnDelay);
-             StartCoroutine(Spawn());
-        }
-       
-    }
+	IEnumerator Spawn() {
+		if (enemiesPerSpawn > 0 && EnemyList.Count < enemiesPerWave) {
+			for(int i = 0; i < enemiesPerSpawn; i++) {
+				if(EnemyList.Count < enemiesPerWave) {
+					GameObject newEnemy = Instantiate(enemies[Random.Range(0, enemies.Length)]) as GameObject;
+					newEnemy.transform.position = spawnPoint.transform.position;
+				}
+			}
+			yield return new WaitForSeconds(spawnDelay);
+			StartCoroutine(Spawn());
+		}
+	}
 
     public void RegisterEnemy(Enemy enemy) {
         EnemyList.Add(enemy);
@@ -147,7 +146,7 @@ public class GameManager : Singleton<GameManager> {
 
 	public void isWaveOver() {
 		TotalEscapedLbl.text = "Escaped " + TotalEscaped + " / 10";
-		if((RoundEscaped + TotalEscaped) == enemiesPerWave) {
+		if((RoundEscaped + TotalKilled) == enemiesPerWave) {
 			SetCurrentGameState();
 			ShowMenu ();
 		}

@@ -65,7 +65,7 @@ MonoBehaviour:
   - {fileID: 1566198882979108, guid: 4bb6dcae130d8c348890079da3962d7e, type: 2}
   maxEnemiesOnScreen: 8
   enemiesPerWave: 8
-  enemiesPerSpawn: 1
+  enemiesPerSpawn: 3
   exitPoint: {fileID: 4015236921721944, guid: 5069cd7dc7efe1a41af2d61ef332e84f, type: 2}
   wayPoints:
   - {fileID: 4936124285606926, guid: 7724c9f0ce3451b459a05fac65e0a237, type: 2}

@@ -29,13 +29,16 @@ public class TowerManager : Singleton<TowerManager> {
 			
 			GameObject newTower = Instantiate(towerBtnPresssed.TowerObject);
 			newTower.transform.position = hit.transform.position;
+			BuyTower (towerBtnPresssed.TowerPrice);
 			disableDragSprite();
 		}
 	}
 
 	public void SelectedTower(TowerBtn towerSelected) {
-		this.towerBtnPresssed = towerSelected;
-		enableDragSprite(towerBtnPresssed.DragSprite);
+		if (GameManager.Instance.TotalMoney >= towerSelected.TowerPrice) { 
+			this.towerBtnPresssed = towerSelected;
+			enableDragSprite (towerBtnPresssed.DragSprite);
+		}
 	}
 
 	public void OnBuildSiteClicked() {
@@ -66,5 +69,9 @@ public class TowerManager : Singleton<TowerManager> {
 	public void disableDragSprite() {
 		spriteRenderer.enabled = false;
 		spriteRenderer.sprite = null;
+	}
+
+	public void BuyTower(int price) {
+		GameManager.Instance.SubtractMoney (price);
 	}
 }

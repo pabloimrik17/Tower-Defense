@@ -16,7 +16,7 @@ public class TowerBtn : MonoBehaviour {
 
     public int TowerPrice {
         get {
-            return TowerPrice;
+			return towerPrice;
         }
     }
 

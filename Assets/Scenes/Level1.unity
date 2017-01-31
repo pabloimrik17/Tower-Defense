@@ -1085,11 +1085,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1512148003}
     m_Modifications:
-    - target: {fileID: 114564809921145062, guid: f73e63bc870e437409ef34dd2e6b461d,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 224149319526377380, guid: f73e63bc870e437409ef34dd2e6b461d,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -1182,29 +1177,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114564809921145062, guid: f73e63bc870e437409ef34dd2e6b461d,
         type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114564809921145062, guid: f73e63bc870e437409ef34dd2e6b461d,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114564809921145062, guid: f73e63bc870e437409ef34dd2e6b461d,
-        type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 114503548487702944, guid: 9ae6baf08e31e7346b34433b9bc07ac8,
-        type: 2}
-    - target: {fileID: 114564809921145062, guid: f73e63bc870e437409ef34dd2e6b461d,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: playBtnPressed
-      objectReference: {fileID: 0}
-    - target: {fileID: 114564809921145062, guid: f73e63bc870e437409ef34dd2e6b461d,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 733101723}
+    - target: {fileID: 1499683357099924, guid: f73e63bc870e437409ef34dd2e6b461d, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f73e63bc870e437409ef34dd2e6b461d, type: 2}
@@ -9508,6 +9486,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4a7c654409c9df34f89d2ca1357de28e, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &733101723 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114503548487702944, guid: 9ae6baf08e31e7346b34433b9bc07ac8,
+    type: 2}
+  m_PrefabInternal: {fileID: 2145933873}
+  m_Script: {fileID: 11500000, guid: a5d28d8666da3804c9afa70345d81d20, type: 3}
 --- !u!1 &733504929
 GameObject:
   m_ObjectHideFlags: 0
@@ -14259,6 +14243,12 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.85333335, y: 0.85333335}
+--- !u!114 &1000352824 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114194808196803676, guid: e13217a274874d340a66c1f3777a4217,
+    type: 2}
+  m_PrefabInternal: {fileID: 1849480553}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1001297939
 GameObject:
   m_ObjectHideFlags: 0
@@ -15587,6 +15577,12 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.85333335, y: 0.85333335}
+--- !u!114 &1099197781 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114564809921145062, guid: f73e63bc870e437409ef34dd2e6b461d,
+    type: 2}
+  m_PrefabInternal: {fileID: 67676917}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1100674633
 GameObject:
   m_ObjectHideFlags: 0
@@ -22022,6 +22018,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b987e97c81f7fbf4e823edf1167cab8e, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1537490759 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114792700208375758, guid: b987e97c81f7fbf4e823edf1167cab8e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1527121837}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1539877393
 GameObject:
   m_ObjectHideFlags: 0
@@ -22496,6 +22498,12 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.85333335, y: 0.85333335}
+--- !u!114 &1577906740 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114315192795495474, guid: f73e63bc870e437409ef34dd2e6b461d,
+    type: 2}
+  m_PrefabInternal: {fileID: 67676917}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1578258791
 GameObject:
   m_ObjectHideFlags: 0
@@ -26184,6 +26192,12 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.85333335, y: 0.85333335}
+--- !u!114 &1854812982 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114488634167437310, guid: b987e97c81f7fbf4e823edf1167cab8e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1527121837}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1857780146
 GameObject:
   m_ObjectHideFlags: 0
@@ -30061,6 +30075,41 @@ Prefab:
     - target: {fileID: 4461314611154428, guid: 9ae6baf08e31e7346b34433b9bc07ac8, type: 2}
       propertyPath: m_RootOrder
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503548487702944, guid: 9ae6baf08e31e7346b34433b9bc07ac8,
+        type: 2}
+      propertyPath: enemiesPerSpawn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503548487702944, guid: 9ae6baf08e31e7346b34433b9bc07ac8,
+        type: 2}
+      propertyPath: playBtn
+      value: 
+      objectReference: {fileID: 1099197781}
+    - target: {fileID: 114503548487702944, guid: 9ae6baf08e31e7346b34433b9bc07ac8,
+        type: 2}
+      propertyPath: playBtnLbl
+      value: 
+      objectReference: {fileID: 1577906740}
+    - target: {fileID: 114503548487702944, guid: 9ae6baf08e31e7346b34433b9bc07ac8,
+        type: 2}
+      propertyPath: totalMoneyLbl
+      value: 
+      objectReference: {fileID: 1000352824}
+    - target: {fileID: 114503548487702944, guid: 9ae6baf08e31e7346b34433b9bc07ac8,
+        type: 2}
+      propertyPath: currentWaveLbl
+      value: 
+      objectReference: {fileID: 1537490759}
+    - target: {fileID: 114503548487702944, guid: 9ae6baf08e31e7346b34433b9bc07ac8,
+        type: 2}
+      propertyPath: TotalEscapedLbl
+      value: 
+      objectReference: {fileID: 1854812982}
+    - target: {fileID: 114503548487702944, guid: 9ae6baf08e31e7346b34433b9bc07ac8,
+        type: 2}
+      propertyPath: totalWaves
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9ae6baf08e31e7346b34433b9bc07ac8, type: 2}

@@ -189,13 +189,15 @@ public class GameManager : Singleton<GameManager> {
 				waveNumber += 1;
 				enemiesPerWave += waveNumber;
 				break;
-			default:
-				enemiesPerWave = 3;
-				TotalEscaped = 0;
-				TotalMoney = 10;
-				totalMoneyLbl.text = TotalMoney.ToString ();
-				TotalEscapedLbl.text = "Escaped " + TotalEscaped + "/10";
-				break;
+		default:
+			enemiesPerWave = 3;
+			TotalEscaped = 0;
+			TotalMoney = 10;
+			TowerManager.Instance.DestroyAllTower ();
+			TowerManager.Instance.RenameTagsBuildSites ();
+			totalMoneyLbl.text = TotalMoney.ToString ();
+			TotalEscapedLbl.text = "Escaped " + TotalEscaped + "/10";
+			break;
 		}
 
 		DestroyAllEnemies();

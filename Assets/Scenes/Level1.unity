@@ -6200,6 +6200,12 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1289120310}
+    - target: {fileID: 114890056226285976, guid: 8c82539c69f6d754b84a45961cb8a6ca,
+        type: 2}
+      propertyPath: towerObject
+      value: 
+      objectReference: {fileID: 114209119889061134, guid: 646a7fb9fd90603448dfaeb003a06b20,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8c82539c69f6d754b84a45961cb8a6ca, type: 2}
   m_IsPrefabParent: 0
@@ -9483,6 +9489,12 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1289120310}
+    - target: {fileID: 114384950960118272, guid: 4a7c654409c9df34f89d2ca1357de28e,
+        type: 2}
+      propertyPath: towerObject
+      value: 
+      objectReference: {fileID: 114952413416155724, guid: 36be5a2218627384795905aa1f67ccfa,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4a7c654409c9df34f89d2ca1357de28e, type: 2}
   m_IsPrefabParent: 0
@@ -9719,6 +9731,12 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1289120310}
+    - target: {fileID: 114498563637399852, guid: 0ba97f801e05810499fc8393462ad81f,
+        type: 2}
+      propertyPath: towerObject
+      value: 
+      objectReference: {fileID: 114750754429473166, guid: fe6adaaacb0433743bf6c617b14dc7b8,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0ba97f801e05810499fc8393462ad81f, type: 2}
   m_IsPrefabParent: 0

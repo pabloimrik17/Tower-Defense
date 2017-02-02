@@ -60,6 +60,7 @@ public class TowerManager : Singleton<TowerManager> {
 			Tower newTower = Instantiate(towerBtnPresssed.TowerObject);
 			newTower.transform.position = hit.transform.position;
 			BuyTower (towerBtnPresssed.TowerPrice);
+			GameManager.Instance.AudioSource.PlayOneShot (SoundManager.Instance.TowerBuilt);
 			RegisterTower (newTower);
 			disableDragSprite();
 		}

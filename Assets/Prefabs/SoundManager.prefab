@@ -9,52 +9,52 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1208557533167430}
+  m_RootGameObject: {fileID: 1863018852934500}
   m_IsPrefabParent: 1
---- !u!1 &1208557533167430
+--- !u!1 &1863018852934500
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4461314611154428}
-  - component: {fileID: 114503548487702944}
-  - component: {fileID: 82404729715808494}
+  - component: {fileID: 4711455568335066}
+  - component: {fileID: 82806606593015678}
+  - component: {fileID: 114362152368838254}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: SoundManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4461314611154428
+--- !u!4 &4711455568335066
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1208557533167430}
+  m_GameObject: {fileID: 1863018852934500}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.9170294, y: 1.6900737, z: -10.030615}
+  m_LocalPosition: {x: 363.5, y: 381.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &82404729715808494
+--- !u!82 &82806606593015678
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1208557533167430}
+  m_GameObject: {fileID: 1863018852934500}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 9348df1f25e9192429dd5169f556a4d7, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -108,7 +108,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -121,39 +121,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &114503548487702944
+--- !u!114 &114362152368838254
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1208557533167430}
+  m_GameObject: {fileID: 1863018852934500}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5d28d8666da3804c9afa70345d81d20, type: 3}
+  m_Script: {fileID: 11500000, guid: 6525a2c1255c1cc4cab411266c650898, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalWaves: 10
-  totalMoneyLbl: {fileID: 0}
-  currentWaveLbl: {fileID: 0}
-  TotalEscapedLbl: {fileID: 0}
-  spawnPoint: {fileID: 1040888624125068, guid: c71bc050d34372c4c9af413ac251554b, type: 2}
-  enemies:
-  - {fileID: 1220905865491808, guid: 1125c0ecbb7901741a9430b8bfbbca26, type: 2}
-  - {fileID: 1671144718428894, guid: d65975f4c1f153e49849cafabacce0a0, type: 2}
-  - {fileID: 1566198882979108, guid: 4bb6dcae130d8c348890079da3962d7e, type: 2}
-  enemiesPerWave: 8
-  enemiesPerSpawn: 1
-  exitPoint: {fileID: 4015236921721944, guid: 5069cd7dc7efe1a41af2d61ef332e84f, type: 2}
-  wayPoints:
-  - {fileID: 4936124285606926, guid: 7724c9f0ce3451b459a05fac65e0a237, type: 2}
-  - {fileID: 4422235129869200, guid: 7724c9f0ce3451b459a05fac65e0a237, type: 2}
-  - {fileID: 4114039396066752, guid: 7724c9f0ce3451b459a05fac65e0a237, type: 2}
-  - {fileID: 4347290044375090, guid: 7724c9f0ce3451b459a05fac65e0a237, type: 2}
-  - {fileID: 4615839018840924, guid: 7724c9f0ce3451b459a05fac65e0a237, type: 2}
-  - {fileID: 4086229530780040, guid: 7724c9f0ce3451b459a05fac65e0a237, type: 2}
-  - {fileID: 4281850197733514, guid: 7724c9f0ce3451b459a05fac65e0a237, type: 2}
-  - {fileID: 4180071347463102, guid: 7724c9f0ce3451b459a05fac65e0a237, type: 2}
-  - {fileID: 4072981197242344, guid: 7724c9f0ce3451b459a05fac65e0a237, type: 2}
-  playBtnLbl: {fileID: 0}
-  playBtn: {fileID: 0}
-  EnemyList: []
+  arrow: {fileID: 8300000, guid: b8da9446b2d348540a932b31c8ef3181, type: 3}
+  death: {fileID: 8300000, guid: 5a8cb670d14322842a81919fe439f2c8, type: 3}
+  fireball: {fileID: 8300000, guid: 783e43b37758ae24c9f19f75d21eb91b, type: 3}
+  gameover: {fileID: 8300000, guid: 86cf2ac95d0f77a49b1f6a69ff063105, type: 3}
+  hit: {fileID: 8300000, guid: c482b14e62d5afc43b5ee3f722d13e67, type: 3}
+  level: {fileID: 8300000, guid: 9348df1f25e9192429dd5169f556a4d7, type: 3}
+  newGame: {fileID: 8300000, guid: 07d21c63f7f8c1343b5fe175cb32f474, type: 3}
+  rock: {fileID: 8300000, guid: 68820fd56c263e34485db09e06cc300a, type: 3}
+  towerBuilt: {fileID: 8300000, guid: cd26e8e9f30b9554185869511ce3d949, type: 3}

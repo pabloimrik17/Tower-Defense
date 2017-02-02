@@ -92,6 +92,17 @@ public class Tower : MonoBehaviour {
 		if (targetEnemy != null) {
 			Projectile newProjectile = Instantiate (projectile) as Projectile;	
 			projectile.transform.localPosition = transform.localPosition;
+			switch (projectile.ProjectileType) {
+				case projectileType.arrow:
+					GameManager.Instance.AudioSource.PlayOneShot (SoundManager.Instance.Arrow);
+					break;
+				case projectileType.fireball:
+					GameManager.Instance.AudioSource.PlayOneShot (SoundManager.Instance.Fireball);
+					break;
+				case projectileType.rock:
+					GameManager.Instance.AudioSource.PlayOneShot (SoundManager.Instance.Rock);
+					break;
+			}
 			StartCoroutine(ShootProjectile(newProjectile));
 		}
 	}

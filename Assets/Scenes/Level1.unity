@@ -25809,6 +25809,58 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.85333335, y: 0.85333335}
+--- !u!1001 &1834563286
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4711455568335066, guid: 77d4b8473fa90524ebe7a5e9ae5f2243, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 363.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4711455568335066, guid: 77d4b8473fa90524ebe7a5e9ae5f2243, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 381.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4711455568335066, guid: 77d4b8473fa90524ebe7a5e9ae5f2243, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4711455568335066, guid: 77d4b8473fa90524ebe7a5e9ae5f2243, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4711455568335066, guid: 77d4b8473fa90524ebe7a5e9ae5f2243, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4711455568335066, guid: 77d4b8473fa90524ebe7a5e9ae5f2243, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4711455568335066, guid: 77d4b8473fa90524ebe7a5e9ae5f2243, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4711455568335066, guid: 77d4b8473fa90524ebe7a5e9ae5f2243, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 82806606593015678, guid: 77d4b8473fa90524ebe7a5e9ae5f2243,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9348df1f25e9192429dd5169f556a4d7, type: 3}
+    - target: {fileID: 82806606593015678, guid: 77d4b8473fa90524ebe7a5e9ae5f2243,
+        type: 2}
+      propertyPath: m_Volume
+      value: 0.217
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 77d4b8473fa90524ebe7a5e9ae5f2243, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1834942067
 GameObject:
   m_ObjectHideFlags: 0
@@ -30096,21 +30148,6 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114503548487702944, guid: 9ae6baf08e31e7346b34433b9bc07ac8,
         type: 2}
-      propertyPath: enemiesPerSpawn
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114503548487702944, guid: 9ae6baf08e31e7346b34433b9bc07ac8,
-        type: 2}
-      propertyPath: playBtn
-      value: 
-      objectReference: {fileID: 1099197781}
-    - target: {fileID: 114503548487702944, guid: 9ae6baf08e31e7346b34433b9bc07ac8,
-        type: 2}
-      propertyPath: playBtnLbl
-      value: 
-      objectReference: {fileID: 1577906740}
-    - target: {fileID: 114503548487702944, guid: 9ae6baf08e31e7346b34433b9bc07ac8,
-        type: 2}
       propertyPath: totalMoneyLbl
       value: 
       objectReference: {fileID: 1000352824}
@@ -30126,9 +30163,14 @@ Prefab:
       objectReference: {fileID: 1854812982}
     - target: {fileID: 114503548487702944, guid: 9ae6baf08e31e7346b34433b9bc07ac8,
         type: 2}
-      propertyPath: totalWaves
-      value: 10
-      objectReference: {fileID: 0}
+      propertyPath: playBtnLbl
+      value: 
+      objectReference: {fileID: 1577906740}
+    - target: {fileID: 114503548487702944, guid: 9ae6baf08e31e7346b34433b9bc07ac8,
+        type: 2}
+      propertyPath: playBtn
+      value: 
+      objectReference: {fileID: 1099197781}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9ae6baf08e31e7346b34433b9bc07ac8, type: 2}
   m_IsPrefabParent: 0

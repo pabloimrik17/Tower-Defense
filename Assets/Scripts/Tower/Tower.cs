@@ -117,7 +117,7 @@ public class Tower : MonoBehaviour {
 		}
 
 		if (projectile != null || targetEnemy == null) {
-			Destroy(projectile);
+			Destroy(projectile.gameObject);
 		}
 	}
 
